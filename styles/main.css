@@ -1,0 +1,1419 @@
+@charset "UTF-8";
+/*------------------------------*\
+# VARIABLES 
+\*------------------------------*/
+/*------------------------------*\
+# MIXINS
+\*------------------------------*/
+/*------------------------------*\
+# GLITCHES
+\*------------------------------*/
+@-webkit-keyframes general-glitch {
+  0%, 10% {
+    transform: skew(-20deg);
+    left: -4px;
+  }
+  11% {
+    transform: skew(0deg);
+    left: 2px;
+  }
+  50% {
+    transform: skew(0deg);
+  }
+  51%, 60% {
+    transform: skew(10deg);
+  }
+  61%, 100% {
+    transform: skew(0deg);
+  }
+}
+@keyframes general-glitch {
+  0%, 10% {
+    transform: skew(-20deg);
+    left: -4px;
+  }
+  11% {
+    transform: skew(0deg);
+    left: 2px;
+  }
+  50% {
+    transform: skew(0deg);
+  }
+  51%, 60% {
+    transform: skew(10deg);
+  }
+  61%, 100% {
+    transform: skew(0deg);
+  }
+}
+.p-glitch {
+  position: relative;
+  -webkit-animation-name: general-glitch;
+          animation-name: general-glitch;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.p-glitch-hover:hover, .p-glitch-hover:focus, .p-glitch-hover:active {
+  position: relative;
+  -webkit-animation-name: general-glitch;
+          animation-name: general-glitch;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.p-glitch-fast {
+  position: relative;
+  -webkit-animation-name: general-glitch;
+          animation-name: general-glitch;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.p-glitch-faster {
+  position: relative;
+  -webkit-animation-name: general-glitch;
+          animation-name: general-glitch;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.p-glitch-slow {
+  position: relative;
+  -webkit-animation-name: general-glitch;
+          animation-name: general-glitch;
+  -webkit-animation-duration: 2.4s;
+          animation-duration: 2.4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.p-glitch-slower {
+  position: relative;
+  -webkit-animation-name: general-glitch;
+          animation-name: general-glitch;
+  -webkit-animation-duration: 3.2s;
+          animation-duration: 3.2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+/*------------------------------*\
+# TRIMS
+\*------------------------------*/
+.p-trim-1 {
+  position: relative;
+}
+.p-trim-1:before {
+  content: "";
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  -webkit-clip-path: polygon(calc(0% + 30px) -1px, calc(0% + 45px) 15px, 15% 15px, calc(15% + 15px) -1px, calc(25% + 30px) -1px, calc(25% + 60px) 30px, 50% 30px, calc(50% + 30px) -1px, calc(80% + 30px) -1px, calc(80% + 45px) 15px, 95% 15px, calc(95% + 15px) -1px);
+          clip-path: polygon(calc(0% + 30px) -1px, calc(0% + 45px) 15px, 15% 15px, calc(15% + 15px) -1px, calc(25% + 30px) -1px, calc(25% + 60px) 30px, 50% 30px, calc(50% + 30px) -1px, calc(80% + 30px) -1px, calc(80% + 45px) 15px, 95% 15px, calc(95% + 15px) -1px);
+}
+.p-trim-1:after {
+  content: "";
+  display: block;
+  bottom: -1px;
+  left: 0px;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  -webkit-clip-path: polygon(0% 0%, 18% 0%, calc(18% + 45px) 45px, 36% 30px, calc(36% + 15px) 15px, 70% 15px, calc(70% + 15px) 30px, 80% 45px, calc(80% + 45px) 0px, 100% 0px, 100% 45px, 0px 45px);
+          clip-path: polygon(0% 0%, 18% 0%, calc(18% + 45px) 45px, 36% 30px, calc(36% + 15px) 15px, 70% 15px, calc(70% + 15px) 30px, 80% 45px, calc(80% + 45px) 0px, 100% 0px, 100% 45px, 0px 45px);
+}
+
+.p-trim-2 {
+  position: relative;
+}
+.p-trim-2:before {
+  content: "";
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  -webkit-clip-path: polygon(calc(0% + 30px) -1px, calc(0% + 45px) 15px, 20% 15px, calc(20% + 15px) -1px, calc(30% + 30px) -1px, calc(30% + 60px) 30px, 50% 30px, calc(50% + 30px) -1px, calc(60% + 30px) -1px, calc(60% + 45px) 15px, 90% 15px, calc(90% + 15px) -1px);
+          clip-path: polygon(calc(0% + 30px) -1px, calc(0% + 45px) 15px, 20% 15px, calc(20% + 15px) -1px, calc(30% + 30px) -1px, calc(30% + 60px) 30px, 50% 30px, calc(50% + 30px) -1px, calc(60% + 30px) -1px, calc(60% + 45px) 15px, 90% 15px, calc(90% + 15px) -1px);
+}
+.p-trim-2:after {
+  content: "";
+  display: block;
+  bottom: -1px;
+  left: 0px;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  -webkit-clip-path: polygon(0% 0%, 5% 0%, calc(5% + 45px) 45px, 15% 30px, calc(15% + 15px) 15px, 40% 15px, calc(40% + 15px) 30px, 55% 30px, calc(55% + 15px) 15px, 80% 15px, calc(80% + 15px) 15px, 80% 15px, calc(80% + 15px) 0px, 100% 0px, 100% 45px, 0px 45px);
+          clip-path: polygon(0% 0%, 5% 0%, calc(5% + 45px) 45px, 15% 30px, calc(15% + 15px) 15px, 40% 15px, calc(40% + 15px) 30px, 55% 30px, calc(55% + 15px) 15px, 80% 15px, calc(80% + 15px) 15px, 80% 15px, calc(80% + 15px) 0px, 100% 0px, 100% 45px, 0px 45px);
+}
+
+.p-trim-3 {
+  position: relative;
+}
+.p-trim-3:before {
+  content: "";
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  -webkit-clip-path: polygon(calc(0% + 30px) -1px, calc(0% + 60px) 30px, 25% 30px, calc(25% + 30px) -1px, calc(15% + 15px) -1px, calc(15% + 30px) 15px, 50% 15px, calc(50% + 15px) -1px, calc(65% + 15px) -1px, calc(65% + 45px) 30px, 80% 45px, calc(80% + 45px) -1px);
+          clip-path: polygon(calc(0% + 30px) -1px, calc(0% + 60px) 30px, 25% 30px, calc(25% + 30px) -1px, calc(15% + 15px) -1px, calc(15% + 30px) 15px, 50% 15px, calc(50% + 15px) -1px, calc(65% + 15px) -1px, calc(65% + 45px) 30px, 80% 45px, calc(80% + 45px) -1px);
+}
+.p-trim-3:after {
+  content: "";
+  display: block;
+  bottom: -1px;
+  left: 0px;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  -webkit-clip-path: polygon(0% 0%, 10% 0%, calc(10% + 45px) 45px, 25% 30px, calc(25% + 15px) 15px, 50% 15px, calc(50% + 15px) 30px, 65% 45px, calc(65% + 45px) 0px, 100% 0px, 100% 45px, 0px 45px);
+          clip-path: polygon(0% 0%, 10% 0%, calc(10% + 45px) 45px, 25% 30px, calc(25% + 15px) 15px, 50% 15px, calc(50% + 15px) 30px, 65% 45px, calc(65% + 45px) 0px, 100% 0px, 100% 45px, 0px 45px);
+}
+
+.p-trim-bottom {
+  position: relative;
+}
+.p-trim-bottom:after {
+  content: "";
+  display: block;
+  bottom: -1px;
+  left: 0px;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  -webkit-clip-path: polygon(0% 0%, 20% 0%, calc(20% + 45px) 45px, 20% 30px, calc(20% + 15px) 15px, 40% 15px, calc(40% + 15px) 30px, 85% 45px, calc(85% + 45px) 0px, 100% 0px, 100% 45px, 0px 45px);
+          clip-path: polygon(0% 0%, 20% 0%, calc(20% + 45px) 45px, 20% 30px, calc(20% + 15px) 15px, 40% 15px, calc(40% + 15px) 30px, 85% 45px, calc(85% + 45px) 0px, 100% 0px, 100% 45px, 0px 45px);
+}
+
+/*------------------------------*\
+# LINES
+\*------------------------------*/
+@-webkit-keyframes glitch-flip {
+  0%, 10% {
+    transform: scaleY(1);
+  }
+  11%, 50% {
+    transform: scaleY(-1);
+  }
+  51%, 60% {
+    transform: scaleY(1);
+  }
+  61%, 100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes glitch-flip {
+  0%, 10% {
+    transform: scaleY(1);
+  }
+  11%, 50% {
+    transform: scaleY(-1);
+  }
+  51%, 60% {
+    transform: scaleY(1);
+  }
+  61%, 100% {
+    transform: scaleY(1);
+  }
+}
+@-webkit-keyframes glitch-bungle-1 {
+  0% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 185px 6px, 180px 10px, 20px 10px, 15px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 185px 6px, 180px 10px, 20px 10px, 15px 6px, 0px 6px);
+  }
+  10% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  11% {
+    transform: skew(0deg);
+    left: 2px;
+    -webkit-clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 185px 6px, 180px 10px, 20px 10px, 15px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 185px 6px, 180px 10px, 20px 10px, 15px 6px, 0px 6px);
+  }
+  50% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  51% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  59% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  60% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  100% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 185px 6px, 180px 10px, 20px 10px, 15px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 185px 6px, 180px 10px, 20px 10px, 15px 6px, 0px 6px);
+  }
+}
+@keyframes glitch-bungle-1 {
+  0% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 185px 6px, 180px 10px, 20px 10px, 15px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 185px 6px, 180px 10px, 20px 10px, 15px 6px, 0px 6px);
+  }
+  10% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  11% {
+    transform: skew(0deg);
+    left: 2px;
+    -webkit-clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 185px 6px, 180px 10px, 20px 10px, 15px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 185px 6px, 180px 10px, 20px 10px, 15px 6px, 0px 6px);
+  }
+  50% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  51% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  59% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  60% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  100% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 185px 6px, 180px 10px, 20px 10px, 15px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 185px 6px, 180px 10px, 20px 10px, 15px 6px, 0px 6px);
+  }
+}
+@-webkit-keyframes glitch-bungle-2 {
+  0% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 200px 0px, 205px 5px, 100% 5px, 100% 6px, 260px 6px, 255px 10px, 20px 10px, 15px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 200px 0px, 205px 5px, 100% 5px, 100% 6px, 260px 6px, 255px 10px, 20px 10px, 15px 6px, 0px 6px);
+  }
+  10% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  11% {
+    transform: skew(0deg);
+    left: 2px;
+    -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 200px 0px, 205px 5px, 100% 5px, 100% 6px, 260px 6px, 255px 10px, 20px 10px, 15px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 200px 0px, 205px 5px, 100% 5px, 100% 6px, 260px 6px, 255px 10px, 20px 10px, 15px 6px, 0px 6px);
+  }
+  50% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  51% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  59% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  60% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  100% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 200px 0px, 205px 5px, 100% 5px, 100% 6px, 260px 6px, 255px 10px, 20px 10px, 15px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 200px 0px, 205px 5px, 100% 5px, 100% 6px, 260px 6px, 255px 10px, 20px 10px, 15px 6px, 0px 6px);
+  }
+}
+@keyframes glitch-bungle-2 {
+  0% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 200px 0px, 205px 5px, 100% 5px, 100% 6px, 260px 6px, 255px 10px, 20px 10px, 15px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 200px 0px, 205px 5px, 100% 5px, 100% 6px, 260px 6px, 255px 10px, 20px 10px, 15px 6px, 0px 6px);
+  }
+  10% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  11% {
+    transform: skew(0deg);
+    left: 2px;
+    -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 200px 0px, 205px 5px, 100% 5px, 100% 6px, 260px 6px, 255px 10px, 20px 10px, 15px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 200px 0px, 205px 5px, 100% 5px, 100% 6px, 260px 6px, 255px 10px, 20px 10px, 15px 6px, 0px 6px);
+  }
+  50% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  51% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  59% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  60% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  100% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 200px 0px, 205px 5px, 100% 5px, 100% 6px, 260px 6px, 255px 10px, 20px 10px, 15px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 200px 0px, 205px 5px, 100% 5px, 100% 6px, 260px 6px, 255px 10px, 20px 10px, 15px 6px, 0px 6px);
+  }
+}
+@-webkit-keyframes glitch-bungle-3 {
+  0% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 280px 0px, 285px 5px, 100% 5px, 100% 6px, 60px 6px, 65px 10px, 180px 10px, 185px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 280px 0px, 285px 5px, 100% 5px, 100% 6px, 60px 6px, 65px 10px, 180px 10px, 185px 6px, 0px 6px);
+  }
+  10% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  11% {
+    transform: skew(0deg);
+    left: 2px;
+    -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 280px 0px, 285px 5px, 100% 5px, 100% 6px, 60px 6px, 65px 10px, 180px 10px, 185px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 280px 0px, 285px 5px, 100% 5px, 100% 6px, 60px 6px, 65px 10px, 180px 10px, 185px 6px, 0px 6px);
+  }
+  50% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  51% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  59% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  60% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  100% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 280px 0px, 285px 5px, 100% 5px, 100% 6px, 60px 6px, 65px 10px, 180px 10px, 185px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 280px 0px, 285px 5px, 100% 5px, 100% 6px, 60px 6px, 65px 10px, 180px 10px, 185px 6px, 0px 6px);
+  }
+}
+@keyframes glitch-bungle-3 {
+  0% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 280px 0px, 285px 5px, 100% 5px, 100% 6px, 60px 6px, 65px 10px, 180px 10px, 185px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 280px 0px, 285px 5px, 100% 5px, 100% 6px, 60px 6px, 65px 10px, 180px 10px, 185px 6px, 0px 6px);
+  }
+  10% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  11% {
+    transform: skew(0deg);
+    left: 2px;
+    -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 280px 0px, 285px 5px, 100% 5px, 100% 6px, 60px 6px, 65px 10px, 180px 10px, 185px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 280px 0px, 285px 5px, 100% 5px, 100% 6px, 60px 6px, 65px 10px, 180px 10px, 185px 6px, 0px 6px);
+  }
+  50% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  51% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  59% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  60% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  100% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 280px 0px, 285px 5px, 100% 5px, 100% 6px, 60px 6px, 65px 10px, 180px 10px, 185px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 280px 0px, 285px 5px, 100% 5px, 100% 6px, 60px 6px, 65px 10px, 180px 10px, 185px 6px, 0px 6px);
+  }
+}
+@-webkit-keyframes glitch-bungle-4 {
+  0% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 250px 0px, 255px 5px, 100% 5px, 100% 6px, 150px 6px, 145px 2px, 25px 2px, 8px 20px, 0px 10px);
+            clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 250px 0px, 255px 5px, 100% 5px, 100% 6px, 150px 6px, 145px 2px, 25px 2px, 8px 20px, 0px 10px);
+  }
+  10% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  11% {
+    transform: skew(0deg);
+    left: 2px;
+    -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 250px 0px, 255px 5px, 100% 5px, 100% 6px, 150px 6px, 145px 2px, 25px 2px, 8px 20px, 0px 10px);
+            clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 250px 0px, 255px 5px, 100% 5px, 100% 6px, 150px 6px, 145px 2px, 25px 2px, 8px 20px, 0px 10px);
+  }
+  50% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  51% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  59% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  60% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  100% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 250px 0px, 255px 5px, 100% 5px, 100% 6px, 150px 6px, 145px 2px, 25px 2px, 8px 20px, 0px 10px);
+            clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 250px 0px, 255px 5px, 100% 5px, 100% 6px, 150px 6px, 145px 2px, 25px 2px, 8px 20px, 0px 10px);
+  }
+}
+@keyframes glitch-bungle-4 {
+  0% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 250px 0px, 255px 5px, 100% 5px, 100% 6px, 150px 6px, 145px 2px, 25px 2px, 8px 20px, 0px 10px);
+            clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 250px 0px, 255px 5px, 100% 5px, 100% 6px, 150px 6px, 145px 2px, 25px 2px, 8px 20px, 0px 10px);
+  }
+  10% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  11% {
+    transform: skew(0deg);
+    left: 2px;
+    -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 250px 0px, 255px 5px, 100% 5px, 100% 6px, 150px 6px, 145px 2px, 25px 2px, 8px 20px, 0px 10px);
+            clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 250px 0px, 255px 5px, 100% 5px, 100% 6px, 150px 6px, 145px 2px, 25px 2px, 8px 20px, 0px 10px);
+  }
+  50% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  51% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  59% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  60% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  100% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 250px 0px, 255px 5px, 100% 5px, 100% 6px, 150px 6px, 145px 2px, 25px 2px, 8px 20px, 0px 10px);
+            clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 250px 0px, 255px 5px, 100% 5px, 100% 6px, 150px 6px, 145px 2px, 25px 2px, 8px 20px, 0px 10px);
+  }
+}
+@-webkit-keyframes glitch-bungle-5 {
+  0% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 230px 0px, 235px 5px, 100% 5px, 100% 6px, 270px 6px, 265px 10px, 20px 10px, 15px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 230px 0px, 235px 5px, 100% 5px, 100% 6px, 270px 6px, 265px 10px, 20px 10px, 15px 6px, 0px 6px);
+  }
+  10% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  11% {
+    transform: skew(0deg);
+    left: 2px;
+    -webkit-clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 230px 0px, 235px 5px, 100% 5px, 100% 6px, 270px 6px, 265px 10px, 20px 10px, 15px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 230px 0px, 235px 5px, 100% 5px, 100% 6px, 270px 6px, 265px 10px, 20px 10px, 15px 6px, 0px 6px);
+  }
+  50% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  51% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  59% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  60% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  100% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 230px 0px, 235px 5px, 100% 5px, 100% 6px, 270px 6px, 265px 10px, 20px 10px, 15px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 230px 0px, 235px 5px, 100% 5px, 100% 6px, 270px 6px, 265px 10px, 20px 10px, 15px 6px, 0px 6px);
+  }
+}
+@keyframes glitch-bungle-5 {
+  0% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 230px 0px, 235px 5px, 100% 5px, 100% 6px, 270px 6px, 265px 10px, 20px 10px, 15px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 230px 0px, 235px 5px, 100% 5px, 100% 6px, 270px 6px, 265px 10px, 20px 10px, 15px 6px, 0px 6px);
+  }
+  10% {
+    transform: skew(-20deg);
+    left: -4px;
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  11% {
+    transform: skew(0deg);
+    left: 2px;
+    -webkit-clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 230px 0px, 235px 5px, 100% 5px, 100% 6px, 270px 6px, 265px 10px, 20px 10px, 15px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 230px 0px, 235px 5px, 100% 5px, 100% 6px, 270px 6px, 265px 10px, 20px 10px, 15px 6px, 0px 6px);
+  }
+  50% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  51% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  59% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 60% 5px, calc(60% - 30px) 0px, calc(60% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(60% + 29px) 1px, calc(60% - 29px) 1px, calc(60% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+  }
+  60% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+            clip-path: polygon(0px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 265px 6px, 260px 10px, 0px 10px);
+  }
+  100% {
+    transform: skew(0deg);
+    -webkit-clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 230px 0px, 235px 5px, 100% 5px, 100% 6px, 270px 6px, 265px 10px, 20px 10px, 15px 6px, 0px 6px);
+            clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 230px 0px, 235px 5px, 100% 5px, 100% 6px, 270px 6px, 265px 10px, 20px 10px, 15px 6px, 0px 6px);
+  }
+}
+.p-underline-1,
+.p-underline-2,
+.p-underline-3,
+.p-underline-4,
+.p-underline-5 {
+  position: relative;
+}
+.p-underline-1:before,
+.p-underline-2:before,
+.p-underline-3:before,
+.p-underline-4:before,
+.p-underline-5:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 10px;
+}
+
+.p-underline-1:before {
+  -webkit-clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 185px 6px, 180px 10px, 20px 10px, 15px 6px, 0px 6px);
+          clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 270px 0px, 275px 5px, 100% 5px, 100% 6px, 185px 6px, 180px 10px, 20px 10px, 15px 6px, 0px 6px);
+}
+
+.p-underline-2:before {
+  -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 200px 0px, 205px 5px, 100% 5px, 100% 6px, 260px 6px, 255px 10px, 20px 10px, 15px 6px, 0px 6px);
+          clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 200px 0px, 205px 5px, 100% 5px, 100% 6px, 260px 6px, 255px 10px, 20px 10px, 15px 6px, 0px 6px);
+}
+
+.p-underline-3:before {
+  -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 280px 0px, 285px 5px, 100% 5px, 100% 6px, 60px 6px, 65px 10px, 180px 10px, 185px 6px, 0px 6px);
+          clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 280px 0px, 285px 5px, 100% 5px, 100% 6px, 60px 6px, 65px 10px, 180px 10px, 185px 6px, 0px 6px);
+}
+
+.p-underline-4:before {
+  -webkit-clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 250px 0px, 255px 5px, 100% 5px, 100% 6px, 150px 6px, 145px 2px, 25px 2px, 8px 20px, 0px 10px);
+          clip-path: polygon(0px 5px, 15px 5px, 20px 0px, 250px 0px, 255px 5px, 100% 5px, 100% 6px, 150px 6px, 145px 2px, 25px 2px, 8px 20px, 0px 10px);
+}
+
+.p-underline-5:before {
+  -webkit-clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 230px 0px, 235px 5px, 100% 5px, 100% 6px, 270px 6px, 265px 10px, 20px 10px, 15px 6px, 0px 6px);
+          clip-path: polygon(0px 5px, 30px 5px, 35px 0px, 230px 0px, 235px 5px, 100% 5px, 100% 6px, 270px 6px, 265px 10px, 20px 10px, 15px 6px, 0px 6px);
+}
+
+.p-flip:before {
+  -webkit-animation-name: glitch-flip;
+          animation-name: glitch-flip;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.p-bungle-1:before {
+  -webkit-animation-name: glitch-bungle-1;
+          animation-name: glitch-bungle-1;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.p-bungle-2:before {
+  -webkit-animation-name: glitch-bungle-2;
+          animation-name: glitch-bungle-2;
+  -webkit-animation-duration: 3.6s;
+          animation-duration: 3.6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.p-bungle-3:before {
+  -webkit-animation-name: glitch-bungle-3;
+          animation-name: glitch-bungle-3;
+  -webkit-animation-duration: 3.2s;
+          animation-duration: 3.2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.p-bungle-4:before {
+  -webkit-animation-name: glitch-bungle-4;
+          animation-name: glitch-bungle-4;
+  -webkit-animation-duration: 2.8s;
+          animation-duration: 2.8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.p-bungle-5:before {
+  -webkit-animation-name: glitch-bungle-5;
+          animation-name: glitch-bungle-5;
+  -webkit-animation-duration: 2.4s;
+          animation-duration: 2.4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+/*------------------------------*\
+# BUTTONS
+\*------------------------------*/
+@-webkit-keyframes btn-glitch {
+  0%, 45% {
+    transform: skew(0deg);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  46%, 55% {
+    transform: skew(10deg);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  56%, 100% {
+    transform: skew(0deg);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+}
+@keyframes btn-glitch {
+  0%, 45% {
+    transform: skew(0deg);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  46%, 55% {
+    transform: skew(10deg);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  56%, 100% {
+    transform: skew(0deg);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+}
+@-webkit-keyframes btn-glitch-before {
+  0%, 10% {
+    display: none;
+    top: 0px;
+  }
+  11%, 49% {
+    display: block;
+    top: 3%;
+    left: -4px;
+  }
+  50% {
+    display: none;
+    top: 0px;
+  }
+  51% {
+    display: block;
+    top: 80%;
+    filter: blur(1px);
+    height: 10px;
+  }
+  90% {
+    display: block;
+    top: 90%;
+    height: 10px;
+  }
+  91% {
+    filter: blur(0px);
+    display: none;
+    top: 0px;
+    height: 12px;
+  }
+  100% {
+    display: none;
+    top: 0px;
+  }
+}
+@keyframes btn-glitch-before {
+  0%, 10% {
+    display: none;
+    top: 0px;
+  }
+  11%, 49% {
+    display: block;
+    top: 3%;
+    left: -4px;
+  }
+  50% {
+    display: none;
+    top: 0px;
+  }
+  51% {
+    display: block;
+    top: 80%;
+    filter: blur(1px);
+    height: 10px;
+  }
+  90% {
+    display: block;
+    top: 90%;
+    height: 10px;
+  }
+  91% {
+    filter: blur(0px);
+    display: none;
+    top: 0px;
+    height: 12px;
+  }
+  100% {
+    display: none;
+    top: 0px;
+  }
+}
+.p-btn-1 {
+  -webkit-clip-path: polygon(-15px 0%, calc(100% + 15px) 0%, calc(100% + 15px) 100%, 20px 100%, -15px calc(100% - 35px));
+          clip-path: polygon(-15px 0%, calc(100% + 15px) 0%, calc(100% + 15px) 100%, 20px 100%, -15px calc(100% - 35px));
+}
+
+.p-btn-2 {
+  -webkit-clip-path: polygon(-15px 0%, -15px 0%, calc(100% - 20px) 0%, 100% 20px, calc(100% + 15px) 100%, calc(100% + 15px) 100%, 20px 100%, -15px calc(100% - 35px));
+          clip-path: polygon(-15px 0%, -15px 0%, calc(100% - 20px) 0%, 100% 20px, calc(100% + 15px) 100%, calc(100% + 15px) 100%, 20px 100%, -15px calc(100% - 35px));
+}
+
+.p-btn-3 {
+  -webkit-clip-path: polygon(-15px 0%, -15px 0%, calc(100% - 20px) 0%, 100% 20px, calc(100% + 15px) 100%, calc(100% + 15px) 100%, -15px 100%, -15px 100%);
+          clip-path: polygon(-15px 0%, -15px 0%, calc(100% - 20px) 0%, 100% 20px, calc(100% + 15px) 100%, calc(100% + 15px) 100%, -15px 100%, -15px 100%);
+}
+
+.p-btn-1, .p-btn-2, .p-btn-3 {
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: none;
+}
+
+.p-btn-glitch:hover, .p-btn-glitch:focus, .p-btn-glitch:active {
+  -webkit-animation-name: btn-glitch;
+          animation-name: btn-glitch;
+  -webkit-animation-duration: 1.3333333333s;
+          animation-duration: 1.3333333333s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.p-btn-glitch:hover:before, .p-btn-glitch:focus:before, .p-btn-glitch:active:before {
+  display: block;
+  -webkit-animation-name: btn-glitch-before;
+          animation-name: btn-glitch-before;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.p-btn-glitch:before {
+  content: "";
+  position: absolute;
+  display: none;
+  width: calc(100% + 8px);
+  height: 12px;
+  top: 0px;
+  left: -4px;
+}
+
+/*------------------------------*\
+# CUTOUTS
+\*------------------------------*/
+.p-cutout-1 {
+  -webkit-clip-path: polygon(0px 10px, 10px 0px, calc(80% - 10px) 0px, 80% 10px, 100% 10px, 100% calc(100% - 10px), 100% calc(100% - 10px), calc(100% - 10px) 100%, 50% 100%, calc(50% - 10px) calc(100% - 10px), 0% calc(100% - 10px), 0% calc(100% - 10px));
+          clip-path: polygon(0px 10px, 10px 0px, calc(80% - 10px) 0px, 80% 10px, 100% 10px, 100% calc(100% - 10px), 100% calc(100% - 10px), calc(100% - 10px) 100%, 50% 100%, calc(50% - 10px) calc(100% - 10px), 0% calc(100% - 10px), 0% calc(100% - 10px));
+}
+
+.p-cutout-2 {
+  -webkit-clip-path: polygon(0px 10px, calc(5% - 10px) 10px, 5% 0px, calc(25% - 10px) 0px, 25% 10px, calc(40% - 10px) 10px, 40% 0px, 100% 0px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), 80% calc(100% - 10px), calc(80% - 10px) 100%, 10% 100%, calc(10% - 10px) calc(100% - 10px), 0% calc(100% - 10px), 0% calc(100% - 10px));
+          clip-path: polygon(0px 10px, calc(5% - 10px) 10px, 5% 0px, calc(25% - 10px) 0px, 25% 10px, calc(40% - 10px) 10px, 40% 0px, 100% 0px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), 80% calc(100% - 10px), calc(80% - 10px) 100%, 10% 100%, calc(10% - 10px) calc(100% - 10px), 0% calc(100% - 10px), 0% calc(100% - 10px));
+}
+
+.p-cutout-3 {
+  -webkit-clip-path: polygon(0 10px, calc(60% - 10px) 10px, 60% 0, calc(100% - 10px) 0, 100% 10px, 100% 10px, 100% calc(100% - 25px), 100% calc(100% - 10px), calc(100% - 10px) 100%, 10% 100%, calc(10% - 10px) calc(100% - 10px), 0% calc(100% - 10px), 0% calc(100% - 10px));
+          clip-path: polygon(0 10px, calc(60% - 10px) 10px, 60% 0, calc(100% - 10px) 0, 100% 10px, 100% 10px, 100% calc(100% - 25px), 100% calc(100% - 10px), calc(100% - 10px) 100%, 10% 100%, calc(10% - 10px) calc(100% - 10px), 0% calc(100% - 10px), 0% calc(100% - 10px));
+}
+
+.p-cutout-4 {
+  -webkit-clip-path: polygon(0px 0px, calc(10% - 10px) 0px, 10% 10px, calc(30% - 10px) 10px, 30% 0px, calc(90% - 10px) 0px, 90% 10px, 100% 10px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 15px) calc(100% - 10px), calc(80% - 25px) calc(100% - 0px), 10px calc(100% - 0px), 0% calc(100% - 10px));
+          clip-path: polygon(0px 0px, calc(10% - 10px) 0px, 10% 10px, calc(30% - 10px) 10px, 30% 0px, calc(90% - 10px) 0px, 90% 10px, 100% 10px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 15px) calc(100% - 10px), calc(80% - 25px) calc(100% - 0px), 10px calc(100% - 0px), 0% calc(100% - 10px));
+}
+
+.p-cutout-5 {
+  -webkit-clip-path: polygon(0px 10px, calc(10% - 10px) 10px, 10% 0px, calc(60% - 10px) 0px, 60% 10px, calc(80% - 10px) 10px, 80% 0px, 100% 0px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), 100% calc(100% - 10px), calc(100% - 10px) 100%, 30% 100%, calc(30% - 10px) calc(100% - 10px), 0% calc(100% - 10px), 0% calc(100% - 10px));
+          clip-path: polygon(0px 10px, calc(10% - 10px) 10px, 10% 0px, calc(60% - 10px) 0px, 60% 10px, calc(80% - 10px) 10px, 80% 0px, 100% 0px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), 100% calc(100% - 10px), calc(100% - 10px) 100%, 30% 100%, calc(30% - 10px) calc(100% - 10px), 0% calc(100% - 10px), 0% calc(100% - 10px));
+}
+
+/*------------------------------*\
+# TEXT
+\*------------------------------*/
+.p-hypertext {
+  position: relative;
+  -webkit-animation: hypertext-color 1s infinite;
+          animation: hypertext-color 1s infinite;
+}
+.p-hypertext:before, .p-hypertext:after {
+  content: attr(data-content);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.p-hypertext:before {
+  -webkit-animation: hypertext-color 0.5s infinite;
+          animation: hypertext-color 0.5s infinite;
+  -webkit-clip-path: polygon(0 45%, 100% 45%, 100% 0, 0 0);
+          clip-path: polygon(0 45%, 100% 45%, 100% 0, 0 0);
+  opacity: 0.5;
+}
+.p-hypertext:after {
+  -webkit-animation: hypertext-shift 2s infinite;
+          animation: hypertext-shift 2s infinite;
+  -webkit-clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+          clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+  opacity: 0.8;
+}
+
+@-webkit-keyframes cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.p-cursor-underline:after {
+  content: "_";
+  font-weight: 200;
+  -webkit-animation-name: cursor;
+          animation-name: cursor;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.p-cursor-line:after {
+  content: "|";
+  font-weight: 200;
+  -webkit-animation-name: cursor;
+          animation-name: cursor;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.p-cursor-block:after {
+  content: "▮";
+  font-weight: 200;
+  -webkit-animation-name: cursor;
+          animation-name: cursor;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+/*------------------------------*\
+# BOXES
+\*------------------------------*/
+.p-box-1,
+.p-box-2,
+.p-box-3,
+.p-box-4,
+.p-box-5 {
+  border-top-width: 15px;
+  border-left-width: 5px;
+  border-right-width: 5px;
+  border-bottom-width: 15px;
+  border-style: solid;
+}
+
+.p-box-1 {
+  -webkit-clip-path: polygon(0px 10px, 10px 0px, calc(80% - 10px) 0px, 80% 10px, 100% 10px, 100% calc(100% - 10px), 100% calc(100% - 10px), calc(100% - 10px) 100%, 50% 100%, calc(50% - 10px) calc(100% - 10px), 0% calc(100% - 10px), 0% calc(100% - 10px));
+          clip-path: polygon(0px 10px, 10px 0px, calc(80% - 10px) 0px, 80% 10px, 100% 10px, 100% calc(100% - 10px), 100% calc(100% - 10px), calc(100% - 10px) 100%, 50% 100%, calc(50% - 10px) calc(100% - 10px), 0% calc(100% - 10px), 0% calc(100% - 10px));
+}
+
+.p-box-2 {
+  -webkit-clip-path: polygon(0px 10px, calc(5% - 10px) 10px, 5% 0px, calc(25% - 10px) 0px, 25% 10px, calc(40% - 10px) 10px, 40% 0px, 100% 0px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), 80% calc(100% - 10px), calc(80% - 10px) 100%, 10% 100%, calc(10% - 10px) calc(100% - 10px), 0% calc(100% - 10px), 0% calc(100% - 10px));
+          clip-path: polygon(0px 10px, calc(5% - 10px) 10px, 5% 0px, calc(25% - 10px) 0px, 25% 10px, calc(40% - 10px) 10px, 40% 0px, 100% 0px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), 80% calc(100% - 10px), calc(80% - 10px) 100%, 10% 100%, calc(10% - 10px) calc(100% - 10px), 0% calc(100% - 10px), 0% calc(100% - 10px));
+}
+
+.p-box-3 {
+  -webkit-clip-path: polygon(0 10px, calc(60% - 10px) 10px, 60% 0, calc(100% - 10px) 0, 100% 10px, 100% 10px, 100% calc(100% - 25px), 100% calc(100% - 10px), calc(100% - 10px) 100%, 10% 100%, calc(10% - 10px) calc(100% - 10px), 0% calc(100% - 10px), 0% calc(100% - 10px));
+          clip-path: polygon(0 10px, calc(60% - 10px) 10px, 60% 0, calc(100% - 10px) 0, 100% 10px, 100% 10px, 100% calc(100% - 25px), 100% calc(100% - 10px), calc(100% - 10px) 100%, 10% 100%, calc(10% - 10px) calc(100% - 10px), 0% calc(100% - 10px), 0% calc(100% - 10px));
+}
+
+.p-box-4 {
+  -webkit-clip-path: polygon(0px 0px, calc(10% - 10px) 0px, 10% 10px, calc(30% - 10px) 10px, 30% 0px, calc(90% - 10px) 0px, 90% 10px, 100% 10px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 15px) calc(100% - 10px), calc(80% - 25px) calc(100% - 0px), 10px calc(100% - 0px), 0% calc(100% - 10px));
+          clip-path: polygon(0px 0px, calc(10% - 10px) 0px, 10% 10px, calc(30% - 10px) 10px, 30% 0px, calc(90% - 10px) 0px, 90% 10px, 100% 10px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 15px) calc(100% - 10px), calc(80% - 25px) calc(100% - 0px), 10px calc(100% - 0px), 0% calc(100% - 10px));
+}
+
+.p-box-5 {
+  -webkit-clip-path: polygon(0px 10px, calc(10% - 10px) 10px, 10% 0px, calc(60% - 10px) 0px, 60% 10px, calc(80% - 10px) 10px, 80% 0px, 100% 0px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), 100% calc(100% - 10px), calc(100% - 10px) 100%, 30% 100%, calc(30% - 10px) calc(100% - 10px), 0% calc(100% - 10px), 0% calc(100% - 10px));
+          clip-path: polygon(0px 10px, calc(10% - 10px) 10px, 10% 0px, calc(60% - 10px) 0px, 60% 10px, calc(80% - 10px) 10px, 80% 0px, 100% 0px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), 100% calc(100% - 10px), calc(100% - 10px) 100%, 30% 100%, calc(30% - 10px) calc(100% - 10px), 0% calc(100% - 10px), 0% calc(100% - 10px));
+}
+
+/*------------------------------*\
+# VARIABLES
+\*------------------------------*/
+/*------------------------------*\
+# MIXINS
+\*------------------------------*/
+/*------------------------------*\
+# HEADER
+\*------------------------------*/
+/*------------------------------*\
+# MAIN
+\*------------------------------*/
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #010C13;
+  font-family: monospace;
+}
+
+section {
+  padding-inline: 20px;
+}
+
+.heading {
+  text-transform: uppercase;
+  color: #F6F8FF;
+  font-size: 36px;
+}
+
+.subheading {
+  color: #F6F8FF;
+  font-size: 24px;
+}
+
+.copy {
+  color: #F6F8FF;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-2 {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about__inner {
+  width: 100%;
+  max-width: 1366px;
+  margin-inline: auto;
+}
+
+.hero {
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-size: cover;
+  position: relative;
+  padding-top: 200px;
+}
+.hero:before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: linear-gradient(to right, #010C13 20%, rgba(1, 12, 19, 0.3) 100%);
+}
+.hero__inner {
+  width: 100%;
+  max-width: 1366px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.hero__heading {
+  text-transform: uppercase;
+  color: #F6F8FF;
+  font-size: 72px;
+}
+.hero__copy {
+  color: #F6F8FF;
+  font-size: 24px;
+}
+
+.lines span {
+  display: block;
+  color: white;
+}
+
+.p-underline-1,
+.p-underline-2,
+.p-underline-3,
+.p-underline-4,
+.p-underline-5 {
+  line-height: 3.5;
+}
+.p-underline-1:before,
+.p-underline-2:before,
+.p-underline-3:before,
+.p-underline-4:before,
+.p-underline-5:before {
+  background-color: #c022c5;
+}
+
+.buttons a, .buttons button {
+  width: 200px;
+  height: 50px;
+  color: white;
+  background-color: #c022c5;
+}
+.buttons a:before, .buttons button:before {
+  background-color: #c022c5;
+}
+.buttons a:hover, .buttons a:focus, .buttons a:active, .buttons button:hover, .buttons button:focus, .buttons button:active {
+  background-color: #00BBCC;
+}
+.buttons a:hover:before, .buttons a:focus:before, .buttons a:active:before, .buttons button:hover:before, .buttons button:focus:before, .buttons button:active:before {
+  background-color: #00BBCC;
+}
+
+.boxes .p-box-1, .boxes .p-box-3, .boxes .p-box-2, .boxes .p-box-4, .boxes .p-box-5 {
+  border-color: #c022c5;
+  margin-bottom: 25px;
+  padding: 25px;
+  color: #F6F8FF;
+}
+
+.cutouts .p-cutout-1, .cutouts .p-cutout-3, .cutouts .p-cutout-2, .cutouts .p-cutout-4, .cutouts .p-cutout-5 {
+  margin-bottom: 25px;
+  padding: 25px;
+  color: #F6F8FF;
+  background-color: #c022c5;
+}
+
+.text span {
+  display: block;
+  color: #F6F8FF;
+}
+
+.p-hypertext {
+  text-shadow: 0.05em 0 0 rgba(0, 247, 243, 0.75), -0.025em -0.05em 0 rgba(173, 247, 0, 0.75), -0.025em 0.05em 0 rgba(247, 0, 227, 0.75);
+  font-size: 72px;
+  color: #F6F8FF;
+}
+@-webkit-keyframes hypertext-color {
+  0%, 14% {
+    text-shadow: 0.05em 0 0 rgba(0, 247, 243, 0.75), -0.025em -0.05em 0 rgba(173, 247, 0, 0.75), -0.025em 0.05em 0 rgba(247, 0, 227, 0.75);
+  }
+  15%, 49% {
+    text-shadow: -0.05em 0 0 rgba(0, 247, 243, 0.75), 0.025em 0.05em 0 rgba(173, 247, 0, 0.75), 0.025em -0.05em 0 rgba(247, 0, 227, 0.75);
+  }
+  50%, 99% {
+    text-shadow: -0.05em 0 0 rgba(0, 247, 243, 0.75), 0.025em -0.05em 0 rgba(173, 247, 0, 0.75), -0.025em -0.05em 0 rgba(247, 0, 227, 0.75);
+  }
+  100% {
+    text-shadow: 0.225em 0 0 rgba(0, 247, 243, 0.75), 0.25em 0.05em 0 rgba(173, 247, 0, 0.75), 0.025em -0.05em 0 rgba(247, 0, 227, 0.75);
+  }
+}
+@keyframes hypertext-color {
+  0%, 14% {
+    text-shadow: 0.05em 0 0 rgba(0, 247, 243, 0.75), -0.025em -0.05em 0 rgba(173, 247, 0, 0.75), -0.025em 0.05em 0 rgba(247, 0, 227, 0.75);
+  }
+  15%, 49% {
+    text-shadow: -0.05em 0 0 rgba(0, 247, 243, 0.75), 0.025em 0.05em 0 rgba(173, 247, 0, 0.75), 0.025em -0.05em 0 rgba(247, 0, 227, 0.75);
+  }
+  50%, 99% {
+    text-shadow: -0.05em 0 0 rgba(0, 247, 243, 0.75), 0.025em -0.05em 0 rgba(173, 247, 0, 0.75), -0.025em -0.05em 0 rgba(247, 0, 227, 0.75);
+  }
+  100% {
+    text-shadow: 0.225em 0 0 rgba(0, 247, 243, 0.75), 0.25em 0.05em 0 rgba(173, 247, 0, 0.75), 0.025em -0.05em 0 rgba(247, 0, 227, 0.75);
+  }
+}
+@-webkit-keyframes hypertext-shift {
+  0%, 30% {
+    text-shadow: 0.05em 0 0 rgba(0, 247, 243, 0.75), -0.025em -0.05em 0 rgba(173, 247, 0, 0.75), -0.025em 0.05em 0 rgba(247, 0, 227, 0.75);
+    transform: translate(0, 0);
+  }
+  31%, 49% {
+    text-shadow: -0.05em 0 0 rgba(0, 247, 243, 0.75), 0.025em 0.05em 0 rgba(173, 247, 0, 0.75), 0.025em -0.05em 0 rgba(247, 0, 227, 0.75);
+    transform: translate(0.15em, 0.025em);
+  }
+  50%, 70% {
+    transform: translate(0, 0);
+  }
+  50%, 99% {
+    text-shadow: -0.05em 0 0 rgba(0, 247, 243, 0.75), 0.025em -0.05em 0 rgba(173, 247, 0, 0.75), -0.025em -0.05em 0 rgba(247, 0, 227, 0.75);
+  }
+  100% {
+    text-shadow: 0.225em 0 0 rgba(0, 247, 243, 0.75), 0.25em 0.05em 0 rgba(173, 247, 0, 0.75), 0.025em -0.05em 0 rgba(247, 0, 227, 0.75);
+  }
+}
+@keyframes hypertext-shift {
+  0%, 30% {
+    text-shadow: 0.05em 0 0 rgba(0, 247, 243, 0.75), -0.025em -0.05em 0 rgba(173, 247, 0, 0.75), -0.025em 0.05em 0 rgba(247, 0, 227, 0.75);
+    transform: translate(0, 0);
+  }
+  31%, 49% {
+    text-shadow: -0.05em 0 0 rgba(0, 247, 243, 0.75), 0.025em 0.05em 0 rgba(173, 247, 0, 0.75), 0.025em -0.05em 0 rgba(247, 0, 227, 0.75);
+    transform: translate(0.15em, 0.025em);
+  }
+  50%, 70% {
+    transform: translate(0, 0);
+  }
+  50%, 99% {
+    text-shadow: -0.05em 0 0 rgba(0, 247, 243, 0.75), 0.025em -0.05em 0 rgba(173, 247, 0, 0.75), -0.025em -0.05em 0 rgba(247, 0, 227, 0.75);
+  }
+  100% {
+    text-shadow: 0.225em 0 0 rgba(0, 247, 243, 0.75), 0.25em 0.05em 0 rgba(173, 247, 0, 0.75), 0.025em -0.05em 0 rgba(247, 0, 227, 0.75);
+  }
+}
+
+.trims__inner {
+  padding: 20px;
+}
+.trims__fake-footer {
+  padding: 30px;
+  background-color: #c022c5;
+  color: #F6F8FF;
+}
+
+.p-trim-1, .p-trim-2, .p-trim-3 {
+  padding: 60px 30px;
+}
+
+.p-odd {
+  color: white;
+  background-color: #c022c5;
+}
+.p-odd:before {
+  background-color: #010C13;
+}
+.p-odd:after {
+  background-color: #010C13;
+}
+
+.p-even {
+  background-color: #010C13;
+  padding: 30px;
+}
+.p-even span {
+  color: #F6F8FF;
+}
+
+.p-trim-bottom {
+  color: white;
+  background-color: #010C13;
+  padding-bottom: 60px;
+}
+.p-trim-bottom:before {
+  background-color: #010C13;
+}
+.p-trim-bottom:after {
+  background-color: #c022c5;
+}
+
+.goodies span {
+  color: #F6F8FF;
+  display: block;
+}
+.goodies .backgrounds {
+  display: flex;
+}
+.goodies .backgrounds__item {
+  flex: 1;
+  height: 200px;
+}
+.goodies .p-dotted {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 0);
+  background-size: 5px 5px;
+}
+.goodies .p-crossed {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='rgba(255, 255, 255, 0.1)' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.goodies .p-connected {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='rgba(255, 255, 255, 0.2)' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='rgba(255, 255, 255, 0.1)'%3E%3Ccircle cx='769' cy='229' r='6'/%3E%3Ccircle cx='539' cy='269' r='6'/%3E%3Ccircle cx='603' cy='493' r='6'/%3E%3Ccircle cx='731' cy='737' r='6'/%3E%3Ccircle cx='520' cy='660' r='6'/%3E%3Ccircle cx='309' cy='538' r='6'/%3E%3Ccircle cx='295' cy='764' r='6'/%3E%3Ccircle cx='40' cy='599' r='6'/%3E%3Ccircle cx='102' cy='382' r='6'/%3E%3Ccircle cx='127' cy='80' r='6'/%3E%3Ccircle cx='370' cy='105' r='6'/%3E%3Ccircle cx='578' cy='42' r='6'/%3E%3Ccircle cx='237' cy='261' r='6'/%3E%3Ccircle cx='390' cy='382' r='6'/%3E%3C/g%3E%3C/svg%3E");
+}/*# sourceMappingURL=main.css.map */
