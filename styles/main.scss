@@ -30,7 +30,76 @@ $accent-yellow: #E0DD00;
 /*------------------------------*\
 # HEADER
 \*------------------------------*/
+.header {
+	padding-inline: $base-padding;
 
+	&__inner {
+		@include inner();
+	}
+}
+.nav {
+	position: relative;
+	padding-block: $base-padding;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	// &__logo {
+
+	// }
+
+	&__icon {
+		font-size: 36px;
+		transition: all .33s ease;
+		background-color: transparent;
+		border: none;
+		color: $white;
+		cursor: pointer;
+
+		@media(min-width: 992px) {
+			display: none;
+		}
+		&.open {
+			transform: rotate(-180deg);
+		}
+	}
+
+	&__list {
+		position: absolute;
+		max-height: 0;
+		overflow-y: hidden;
+		top: 80px;
+		z-index: 10;
+		background-color: $black;
+		left:0; 
+		right: 0;
+		margin-inline: -20px;
+		transition: all .33s ease-in-out;
+		list-style: none;
+		font-size: 18px;
+		padding-left: $base-padding;
+
+		@media(min-width: 992px) {
+			position: static;
+			max-height: 99em;
+			margin: 0;
+			display: flex;
+			align-items: center;
+		}
+
+		&.open {
+			max-height: 99em;
+			padding-bottom: $base-padding;
+		}
+
+		li {
+			margin: $base-padding 0;
+
+			@media(min-width: 992px) {
+				margin: 0 $base-padding;
+			}
+		}
+	}
+}
 
 
 
@@ -47,39 +116,110 @@ $accent-yellow: #E0DD00;
 // GENERAL
 body {
   background-color: $black;
-  font-family: monospace;
+	color: $white;
+  font-family: 'Nova Mono', monospace;
 }
 
 section {
 	padding-inline: $base-padding;
+	padding-block: 50px;
+}
+
+a {
+	color: $accent-pink;
+	transition: all .33s ease-in-out;
+	text-decoration: none;
+
+	&:hover, &:active, &:focus {
+		color: $accent-yellow;
+	}
+}
+
+code {
+	background-color: $accent-blue;
+	color: $black;
+	padding: 5px;
+	font-size: 18px;
+	display: block;
 }
 
 .heading {
   text-transform: uppercase;
-  color: $white;
   font-size: 36px;
 }
 
 .subheading {
-  color: $white;
   font-size: 24px;
 }
 
-.copy {
-  color: $white;
-}
-
-.grid {
-	display: grid;
-}
-
 .grid-2 {
+	display: grid;
 	grid-template-columns: 1fr;
 	gap: $base-padding;
 
 	@media (min-width: 768px) {
 		grid-template-columns: 1fr 1fr;
 	}
+}
+
+.grid-3 {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: $base-padding;
+
+	@media (min-width: 768px) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+.note {
+	display: flex;
+	align-items: center;
+	color: $accent-yellow;
+	border: 1px solid $accent-yellow;
+	margin-top: $base-padding;
+	padding: 10px;
+	span {
+		font-size: 28px;
+		margin-right: 10px;
+	}
+}
+
+
+// hero 
+.hero {
+  min-height: 50vh;
+  background-image: url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-size: cover;
+  position: relative;
+  padding-top: 200px;
+
+  &:before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: linear-gradient(180deg, $black 0%, rgba($black, 0.5) 50%, $black 100%);
+  }
+
+  &__inner {
+    @include inner;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+		font-family: 'Major Mono Display', monospace;
+    color: $white;
+    font-size: 72px;
+		margin-left: -7px;
+  }
+
+  &__copy {
+    color: $white;
+    font-size: 24px;
+  }
 }
 
 
@@ -92,45 +232,19 @@ section {
 }
 
 
-// hero 
-.hero {
-  min-height: 100vh;
-  background-image: url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
-  background-size: cover;
-  position: relative;
-  padding-top: 200px;
-
-  &:before {
-    position: absolute;
-    content: '';
-    inset: 0;
-    background: linear-gradient(to right, $black 20%, rgba($black, 0.3) 100%);
-		
-  }
-
-  &__inner {
-    @include inner;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-  &__heading {
-    text-transform: uppercase;
-    color: $white;
-    font-size: 72px;
-  }
-
-  &__copy {
-    color: $white;
-    font-size: 24px;
-  }
-}
-
-
 
 // lines
 .lines {
+	&__inner {
+		@include inner;
+	}
+	
+	&__top, &__bottom {
+		@media(min-width: 768px) {
+			grid-column: span 2;
+		}
+	}
+
   span {
     display: block;
     color: white;
@@ -150,10 +264,21 @@ section {
 
 // buttons
 .buttons {
+	&__inner {
+		@include inner;
+	}
+
+	&__top, &__bottom {
+		@media(min-width: 768px) {
+			grid-column: span 3;
+		}
+	}
+
   a, button {
     width: 200px;
     height: 50px;
     color: white;
+		transition: none;
 
     @include button-bg($accent-pink, $accent-blue);
   }
@@ -164,10 +289,18 @@ section {
 
 // boxes
 .boxes {
-  .p-box-1, .p-box-3, .p-box-2, .p-box-4, .p-box-5 {
-    @include box-border($accent-pink);
+	&__inner {
+		@include inner;
+	}
 
-    margin-bottom: 25px;
+	&__top, &__bottom {
+		@media(min-width: 768px) {
+			grid-column: span 2;
+		}
+	}
+
+  .p-box-1, .p-box-3, .p-box-2, .p-box-4, .p-box-5 {
+    border-color: $accent-pink;
     padding: 25px;
     color: $white;
   }
@@ -178,6 +311,14 @@ section {
 
 // cutouts
 .cutouts {
+	&__inner {
+		@include inner;
+	}
+
+	&__top {
+		margin-bottom: $base-padding;
+	}
+
   .p-cutout-1, .p-cutout-3, .p-cutout-2, .p-cutout-4, .p-cutout-5 {
     margin-bottom: 25px;
     padding: 25px;
@@ -192,6 +333,16 @@ section {
 
 // text
 .text {
+	&__inner {
+		@include inner;
+	}
+
+	&__top, &__bottom {
+		@media(min-width: 768px) {
+			grid-column: span 2;
+		}
+	}
+
   span {
     display: block;
     color: $white;
@@ -200,16 +351,31 @@ section {
 
 .p-hypertext {
   @include hypertext(rgba(0,247,243,0.75), rgba(173,247,0,0.75), rgba(247,0,227,0.75));
-  font-size: 72px;
+  font-size: 36px;
   color: $white;
+
+	@media(min-width: 768px) {
+		font-size: 48px;
+	}
+	@media(min-width: 1200px) {
+		font-size: 72px;
+	}
 }
 
 
 // trims
 .trims {
-  &__inner {
-    padding: $base-padding;
-  }
+	&__inner {
+		@include inner;
+	}
+
+	&__top {
+		margin-bottom: $base-padding;
+	}
+
+	&__bottom {
+		margin-top: $base-padding;
+	}
 
   &__fake-footer {
     padding: 30px;
@@ -218,12 +384,10 @@ section {
   }
 }
 
-.p-trim-1, .p-trim-2, .p-trim-3  {
-  padding: 60px 30px;
-}
-
 .p-odd {
 	@include trim-colors($accent-pink, $black, $black, white);
+
+	padding: 60px 30px;
 }
 
 .p-even {
@@ -233,6 +397,11 @@ section {
     color: $white;
   }
 }
+
+.p-odd, .p-even, .trims__fake-footer {
+	margin-inline: -20px;
+}
+
 .p-trim-bottom {
   @include trim-colors($black, $black, $accent-pink, white);
   padding-bottom: 60px;
@@ -242,15 +411,21 @@ section {
 
 // goodies
 .goodies {
-  span {
-    color: $white;
-    display: block;
-  }
+	&__inner {
+		@include inner;
+	}
+
+	&__top, &__bottom {
+		@media(min-width: 768px) {
+			grid-column: span 3;
+		}
+	}
 
   .backgrounds {
-    display: flex;
     &__item {
-      flex: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
       height: 200px;
     }
   }
@@ -266,4 +441,23 @@ section {
   .p-connected {
     @include connected(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
   }
+}
+
+
+.footer {
+	text-align: center;
+	padding: 50px $base-padding;
+	background-color: $accent-pink;
+	font-size: 16px;
+	@media(min-width: 992px) {
+		font-size: 24px;
+	}
+
+	a {
+		color: $black;
+
+		&:hover, &:active, &:focus {
+			color: $accent-yellow;
+		}
+	}
 }

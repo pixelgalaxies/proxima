@@ -214,10 +214,6 @@ $trim-bottom: polygon(
 }
 
 
-// boxes
-@mixin box-border($border-color) {
-  border-color: $border-color;
-}
 
 // text
 @mixin hypertext($color-1: rgba(255, 0, 0, 0.75), $color-2: rgba(0, 255, 0, 0.75), $color-3: rgba(0 0 255 / 0.75)) {
@@ -893,7 +889,7 @@ $trim-bottom: polygon(
   border: none;
 }
 
-.p-btn-glitch {
+.p-btn-hover-glitch {
   &:hover,&:focus,&:active {
     animation-name: btn-glitch;
     animation-duration: $glitch-time / 1.5;
@@ -918,6 +914,27 @@ $trim-bottom: polygon(
     top: 0px;
     left: calc(-4px);
   }
+}
+
+.p-btn-glitch {
+	animation-name: btn-glitch;
+	animation-duration: $glitch-time / 1.5;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear; 
+	
+	&:before {
+		display: block;
+		animation-name: btn-glitch-before;
+		animation-duration: $glitch-time / 2;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 12px;
+    top: 0px;
+    left: calc(-4px);
+	}
 }
 
 

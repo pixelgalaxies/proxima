@@ -4,39 +4,51 @@
 <head>
 	<meta charset="UTF-8" />
 
-	<link rel="stylesheet" href="/styles/main.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Nova+Mono&family=Space+Mono:wght@400;700&display=swap"
 		rel="stylesheet">
+	<link rel="stylesheet" href="/styles/main.css" />
 
 
 	<title>Proxima | Step Into The Future</title>
 </head>
 
 <body>
-	<header>
-		<nav>
-			<span>LOGO</span>
-			<ul class="nav-list">
-				<li>
-					<a href="#about">About</a>
-				</li>
-				<li>
-					<a href="#lines">Lines</a>
-				</li>
-				<li>
-					<a href="#buttons">Buttons</a>
-				</li>
-				<li>
-					<a href="#boxes">Boxes</a>
-				</li>
-				<li>
-
-				</li>
-			</ul>
-		</nav>
+	<header class="header">
+		<div class="header__inner">
+			<nav class="nav">
+				<span class="nav__logo">LOGO</span>
+				<button class="nav__icon">&#9735;</button>
+				<ul class="nav__list">
+					<li>
+						<a href="#about">About</a>
+					</li>
+					<li>
+						<a href="#lines">Lines</a>
+					</li>
+					<li>
+						<a href="#buttons">Buttons</a>
+					</li>
+					<li>
+						<a href="#boxes">Boxes</a>
+					</li>
+					<li>
+						<a href="#cutouts">Cutouts</a>
+					</li>
+					<li>
+						<a href="#text">Text</a>
+					</li>
+					<li>
+						<a href="#trims">Trims</a>
+					</li>
+					<li>
+						<a href="#misc">Misc</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 
 
@@ -45,7 +57,7 @@
 			<div class="hero__inner">
 				<h1 class="hero__heading">Proxima</h1>
 				<p class="hero__copy">
-					Proxima is a SCSS library that will cyberpunkify your site.
+					Proxima is a SCSS library that will let you cyberpunkify your site.
 				</p>
 			</div>
 		</section>
@@ -53,13 +65,24 @@
 
 
 		<section id="about" class="about">
-			<div class="about__inner grid grid-2">
+			<div class="about__inner grid-2">
 				<div class="about__details">
 					<h2 class="heading">About</h2>
-					<p class="copy">Pr</p>
+					<p>
+						Proxima is a library of classes and mixins to use to give your site a cyberpunk look and feel. It is built
+						with SASS and needs to be included in your SASS or SCSS file. This site is just a demo of everything in the
+						library. For full the documentation and code, checkout the <a
+							href="https://github.com/pixelgalaxies/proxima">github repository</a>.
+					</p>
 				</div>
 				<div class="about__use">
 					<h2 class="heading">How To Use</h2>
+					<p>
+						Being a SASS library, you will need to be using SASS in your project in order to use Proxima. You will need
+						to use the import (depracated) keyword or the use keyword to get the source file into your own stylesheet.
+						Simply download the scss file from <a href="https://github.com/pixelgalaxies/proxima">github</a> and 'use'
+						it. Have fun!
+					</p>
 				</div>
 			</div>
 		</section>
@@ -67,59 +90,107 @@
 
 
 		<section id="lines" class="lines">
-			<div class="lines__inner">
-				<h2 class="heading">Lines</h2>
+			<div class="lines__inner grid-2">
+				<div class="lines__top">
+					<h2 class="heading">Lines</h2>
+					<p>
+						These are the basic lines. There is a mixin associated with these
+						lines, it takes in the color you'd like the lines to be and also the
+						line-height of the element. They use the before pseudo element so
+						that the after pseudo element is avaiable for other things. See the
+						Other Goodies section.
+					</p>
+				</div>
 
-				<h3 class="subheading">Basic Lines</h3>
-				<p class="copy">
-					These are the basic lines. There is a mixin associated with these
-					lines, it takes in the color you'd like the lines to be and also the
-					line-height of the element. They use the before pseudo element so
-					that the after pseudo element is avaiable for other things. See the
-					Other Goodies section.
-				</p>
-				<span class="p-underline-1">.p-underline-1</span>
-				<span class="p-underline-2">.p-underline-2</span>
-				<span class="p-underline-3">.p-underline-3</span>
-				<span class="p-underline-4">.p-underline-4</span>
-				<span class="p-underline-5">.p-underline-5</span>
-				<h3 class="subheading">Line Glitches</h3>
-				<span class="p-underline-1 p-flip">.p-underline-1.p-flip</span>
-				<span class="p-underline-1 p-bungle-1">.p-underline-1.p-bungle-1</span>
-				<span class="p-underline-2 p-bungle-2">.p-underline-2.p-bungle-2</span>
-				<span class="p-underline-3 p-bungle-3">.p-underline-3.p-bungle-3</span>
-				<span class="p-underline-4 p-bungle-4">.p-underline-4.p-bungle-4</span>
-				<span class="p-underline-5 p-bungle-5">.p-underline-5.p-bungle-5</span>
-				<h3 class="subheading">Mixins to use</h3>
+				<div>
+					<h3 class="subheading">Basic Lines</h3>
+					<span class="p-underline-1">.p-underline-1</span>
+					<span class="p-underline-2">.p-underline-2</span>
+					<span class="p-underline-3">.p-underline-3</span>
+					<span class="p-underline-4">.p-underline-4</span>
+					<span class="p-underline-5">.p-underline-5</span>
+				</div>
+
+				<div>
+					<h3 class="subheading">Line Glitches</h3>
+					<span class="p-underline-1 p-flip">.p-underline-1.p-flip</span>
+					<span class="p-underline-1 p-bungle-1">.p-underline-1.p-bungle-1</span>
+					<span class="p-underline-2 p-bungle-2">.p-underline-2.p-bungle-2</span>
+					<span class="p-underline-3 p-bungle-3">.p-underline-3.p-bungle-3</span>
+					<span class="p-underline-4 p-bungle-4">.p-underline-4.p-bungle-4</span>
+					<span class="p-underline-5 p-bungle-5">.p-underline-5.p-bungle-5</span>
+				</div>
+				<div class="lines__bottom">
+					<h3 class="subheading">Mixins to use</h3>
+					<p>
+						There's only one mixin for the lines which will set the color and the distance between line and the
+						text.
+						<code>@include underline-color($line-color, $line-height);</code>
+					</p>
+				</div>
 			</div>
 		</section>
 
 
 
 		<section id="buttons" class="buttons">
-			<div class="buttons__inner">
-				<h2 class="heading">Buttons</h2>
-				<h3 class="subheading">Anchor Elements</h3>
-				<a class="p-btn-1" href="#">.p-btn-1</a>
-				<a class="p-btn-2" href="#">.p-btn-2</a>
-				<a class="p-btn-3" href="#">.p-btn-3</a>
-				<h3 class="subheading">Button Elements</h3>
-				<button class="p-btn-1" href="#">.p-btn-1</button>
-				<button class="p-btn-2" href="#">.p-btn-2</button>
-				<button class="p-btn-3" href="#">.p-btn-3</button>
-				<h3 class="subheading">Button Glitches</h3>
-				<button class="p-btn-1 p-btn-glitch" href="#">.p-btn-1</button>
-				<button class="p-btn-2 p-btn-glitch" href="#">.p-btn-2</button>
-				<button class="p-btn-3 p-btn-glitch" href="#">.p-btn-3</button>
-				<h3 class="subheading">Mixins to use</h3>
+			<div class="buttons__inner grid-3">
+				<div class="buttons__top">
+					<h2 class="heading">Buttons</h2>
+					<p>
+						Proxima has three different button variations and two different glitch classes, one that is always glitching
+						and one that glitches on hover. Below are examples of how the classes work with anchor elements and button
+						elements as well as what how the glitch animations look and feel.
+					</p>
+				</div>
+
+
+				<div>
+					<h3 class="subheading">Anchor Elements</h3>
+					<a class="p-btn-1" href="#">.p-btn-1</a>
+					<a class="p-btn-2" href="#">.p-btn-2</a>
+					<a class="p-btn-3" href="#">.p-btn-3</a>
+				</div>
+
+
+				<div>
+					<h3 class="subheading">Button Elements</h3>
+					<button class="p-btn-1" href="#">.p-btn-1</button>
+					<button class="p-btn-2" href="#">.p-btn-2</button>
+					<button class="p-btn-3" href="#">.p-btn-3</button>
+				</div>
+
+
+				<div>
+					<h3 class="subheading">Button Glitches</h3>
+					<button class="p-btn-2 p-btn-glitch" href="#">.p-btn-glitch</button>
+					<button class="p-btn-2 p-btn-hover-glitch" href="#">.p-btn-hover-glitch</button>
+				</div>
+
+
+				<div class="buttons__bottom">
+					<h3 class="subheading">Mixins to use</h3>
+					<p>
+						There's once again only one mixin for buttons which will set the color and the hover color of the buttons.
+						<code>@include button-bg($bg-color, $bg-color-hover);</code>
+					</p>
+				</div>
 			</div>
 		</section>
 
 
 
 		<section id="boxes" class="boxes">
-			<div class="boxes__inner">
-				<h2 class="heading">Boxes</h2>
+			<div class="boxes__inner grid-2">
+				<div class="boxes__top">
+					<h2 class="heading">Boxes</h2>
+					<p>
+						The box classes give any your elements a neat border. Don't forget to set you border color when using these
+						classes!
+					</p>
+				</div>
+
+
 				<div class="p-box-1">
 					<span>.p-box-1</span>
 				</div>
@@ -135,7 +206,14 @@
 				<div class="p-box-5">
 					<span>.p-box-5</span>
 				</div>
-				<h3 class="subheading">Mixins to use</h3>
+
+
+				<div class="boxes__bottom">
+					<h3 class="subheading">Mixins to use</h3>
+					<p>
+						There are NO mixins for the box classes. You just use set the border-color in your stylesheet.
+					</p>
+				</div>
 			</div>
 		</section>
 
@@ -143,7 +221,15 @@
 
 		<section id="cutouts" class="cutouts">
 			<div class="cutouts__inner">
-				<h2 class="heading">Cutouts</h2>
+				<div class="cutouts__top">
+					<h2 class="heading">Cutouts</h2>
+					<p>
+						Cutouts are a set of classes that are basically the reverse of the boxes. Instead of an outline, the
+						element.
+						will have a background fill. Don't forget to set a background color when using these classes!
+					</p>
+				</div>
+
 				<p class="p-cutout-1">
 					.p-cutout-1
 				</p>
@@ -151,7 +237,7 @@
 					.p-cutout-2
 				</p>
 				<p class="p-cutout-3">
-					cp-cutout-3
+					.p-cutout-3
 				</p>
 				<p class="p-cutout-4">
 					.p-cutout-4
@@ -159,31 +245,55 @@
 				<p class="p-cutout-5">
 					.p-cutout-5
 				</p>
+
+				<div class="cutouts__bottom">
+					<h3 class="subheading">Mixins to use</h3>
+					<p>
+						There are NO mixins for the cutout classes. You just use set the background-color in your stylesheet.
+					</p>
+				</div>
+			</div>
 			</div>
 		</section>
 
+
+
 		<section id="text" class="text">
-			<div class="text__inner">
-				<h2 class="heading">Text</h2>
-				<h3 class="subheading">Hyper Text Glitch</h3>
-				<p class="copy">
-					The Hyper Text Glitch applies a color BLAH BLAH BLAH
-				</p>
-				<span class="p-hypertext" data-content=".p-hypertext">
-					.p-hypertext
-				</span>
-				<h4 class="subheading">Mixins to use</h4>
-				<p class="copy">
-					@include hypertext($color-1. $color-2, $color-3);
-				</p>
-				<h3 class="subheading">Cursors</h3>
-				<p class="copy">
-					These classes will use the after pseudo-element and create a
-					blinking cursor after some text.
-				</p>
-				<span class="p-cursor-underline">.p-cursor-underline</span>
-				<span class="p-cursor-line">.p-cursor-line</span>
-				<span class="p-cursor-block">.p-cursor-block</span>
+			<div class="text__inner grid-2">
+				<div class="text__top">
+					<h2 class="heading">Text</h2>
+				</div>
+
+				<div>
+					<h3 class="subheading">Hyper Text Glitch</h3>
+					<p class="copy">
+						The Hyper Text Glitch applies a tri-color overlay to an element. It uses a data attribute called
+						"data-content" and uses pseudo elements to create a glitch effect.
+					</p>
+					<span class="p-hypertext" data-content=".p-hypertext">
+						.p-hypertext
+					</span>
+				</div>
+
+				<div>
+					<h3 class="subheading">Cursors</h3>
+					<p class="copy">
+						These classes will use the after pseudo-element and create a
+						blinking cursor after some text.
+					</p>
+					<span class="p-cursor-underline">.p-cursor-underline</span>
+					<span class="p-cursor-line">.p-cursor-line</span>
+					<span class="p-cursor-block">.p-cursor-block</span>
+				</div>
+
+				<div class="text__bottom">
+					<h4 class="subheading">Mixins to use</h4>
+					<p>
+						For text classes, there is a single mixin that is used for the hypertext. The mixin takes in three colors
+						that are applied to the glitch effect.
+						<code>@include hypertext($color-1. $color-2, $color-3);</code>
+					</p>
+				</div>
 			</div>
 		</section>
 
@@ -191,10 +301,16 @@
 
 		<section id="trims" class="trims">
 			<div class="trims__inner">
-				<h2 class="heading">Trims</h2>
+				<div class="trims__top">
+					<h2 class="heading">Trims</h2>
+					<p>These are the most complicated classes to use of the library. It's recommended to give the trim elements
+						another class (i.e. p-odd) then pass them all the corresponding mixin. Then the "other" non-trim elements
+						can get a class like p-even to be styled all at once. <br> The last element will need the p-trim-bottom
+						class and will accept the trim mixin.</p>
+				</div>
 			</div>
 			<div class="p-trim-1 p-odd">
-				<span>.p-trim-1</span>
+				<span>.p-trim-1.p-odd</span>
 			</div>
 			<div class="p-even">
 				<span>
@@ -203,7 +319,7 @@
 			</div>
 			<div class="p-trim-2 p-odd">
 				<span>
-					.p-trim-2
+					.p-trim-2.p-odd
 				</span>
 			</div>
 			<div class="p-even">
@@ -213,7 +329,7 @@
 			</div>
 			<div class="p-trim-3 p-odd">
 				<span>
-					.p-trim-3
+					.p-trim-3.p-odd
 				</span>
 			</div>
 			<div class="p-trim-bottom p-even">
@@ -227,58 +343,107 @@
 				</span>
 			</div>
 			<div class="trims__inner">
-				<h4 class="subheading">Mixins to use</h4>
-				<p class="copy">
-					@include trim-colors($bg-color, $before-color, $after-color,
-					$text-color)
-				</p>
+				<div class="trims__bottom">
+					<h4 class="subheading">Mixins to use</h4>
+					<p>
+						There is one mixin to use for the trims. You pass it a background color, the before pseudo element color,
+						the after pseudo element color, and the text color.
+						<code>@include trim-colors($bg-color, $before-color, $after-color,
+							$text-color)</code>
+					</p>
+				</div>
 			</div>
 		</section>
 
 
 
 		<section id="goodies" class="goodies">
-			<div class="goodies__inner">
-				<h2 class="heading">Other Goodies</h2>
-				<h3 class="subheading">General Glitches</h3>
-				<p class="copy">
-					The below glitch classes can be applied to any block element.
-				</p>
-				<span class="p-glitch">.p-glitch</span>
-				<span class="p-glitch-hover">.p-glitch-hover</span>
-				<span class="p-glitch-fast">.p-glitch-fast</span>
-				<span class="p-glitch-faster">.p-glitch-faster</span>
-				<span class="p-glitch-slow">.p-glitch-slow</span>
-				<span class="p-glitch-slower">.p-glitch-slower</span>
-				<h3 class="subheading">Background Textures</h3>
-				<div class="backgrounds">
+			<div class="goodies__inner grid-3">
+				<div class="goodies__top">
+					<h2 class="heading">Other Goodies</h2>
+				</div>
+
+
+				<div>
+					<h3 class="subheading">General Glitches</h3>
+					<p class="p-glitch">.p-glitch</p>
+					<p class="p-glitch-hover">.p-glitch-hover</p>
+				</div>
+
+
+				<div>
+					<h3 class="subheading">Fast Glitches</h3>
+					<p class="p-glitch-fast">.p-glitch-fast</p>
+					<p class="p-glitch-faster">.p-glitch-faster</p>
+				</div>
+
+
+				<div>
+					<h3 class="subheading">Slow Glitches</h3>
+					<p class="p-glitch-slow">.p-glitch-slow</p>
+					<p class="p-glitch-slower">.p-glitch-slower</p>
+				</div>
+
+
+				<div>
+					<h3 class="subheading">Background Texture: Dotted</h3>
 					<div class="backgrounds__item p-dotted">
 						<span>.p-dotted</span>
 					</div>
+				</div>
+
+
+				<div>
+					<h3 class="subheading">Background Texture: Crossed</h3>
 					<div class="backgrounds__item p-crossed">
 						<span>.p-crossed</span>
 					</div>
+				</div>
+
+
+				<div>
+					<h3 class="subheading">Background Texture: Connected</h3>
 					<div class="backgrounds__item p-connected">
 						<span>.p-connected</span>
 					</div>
 				</div>
-				<h4 class="subheading">Mixins to use</h4>
-				<p class="copy">
-					For Dotted: @include dotted($dot-color, $size);
-					<br />
-					For Crossed: @include cross($color, $size);
-					<br />
-					For Connected: @include connected($line-color, $dot-color);
-					<br />
-					! These should all use an RGBA value.
-				</p>
+
+				<div class="goodies__bottom">
+					<h4 class="subheading">Mixins to use</h4>
+					<p>There are three mixins for the goodies section, each pertaining to their respective background textures.
+					</p>
+					<p>
+						For Dotted:
+						<code>@include dotted($dot-color, $size);</code>
+						<br />
+						For Crossed:
+						<code>@include crossed($color, $size);</code>
+						<br />
+						For Connected:
+						<code>@include connected($line-color, $dot-color);</code>
+					</p>
+					<span class="note"><span>!</span> Note: You MUST use an RGBA value for these three mixins.</span>
+				</div>
 			</div>
 		</section>
 	</main>
 
 
 
-	<footer></footer>
+	<footer class="footer">
+		<span>
+			Proxima was created by
+			<a href="http://www.dustinclark.ninja">Dustin Clark</a>
+			&copy;2022
+		</span>
+	</footer>
+
+	<script>
+		document.querySelector('.nav__icon').addEventListener('click', function () {
+			document.querySelector('.nav__icon').classList.toggle('open');
+			document.querySelector('.nav__list').classList.toggle('open');
+		})
+	</script>
 </body>
 
 </html>
