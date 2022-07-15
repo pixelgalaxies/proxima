@@ -1344,8 +1344,13 @@ code {
   text-transform: uppercase;
   font-family: "Major Mono Display", monospace;
   color: #F6F8FF;
-  font-size: 72px;
+  font-size: 48px;
   margin-left: -7px;
+}
+@media (min-width: 992px) {
+  .hero__heading {
+    font-size: 72px;
+  }
 }
 .hero__copy {
   color: #F6F8FF;

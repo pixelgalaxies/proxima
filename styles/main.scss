@@ -212,8 +212,11 @@ code {
     text-transform: uppercase;
 		font-family: 'Major Mono Display', monospace;
     color: $white;
-    font-size: 72px;
+    font-size: 48px;
 		margin-left: -7px;
+		@media(min-width: 992px) {
+			font-size: 72px;
+		}
   }
 
   &__copy {
