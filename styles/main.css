@@ -1185,12 +1185,15 @@
   justify-content: space-between;
   align-items: center;
 }
+.nav__logo {
+  max-width: 100px;
+}
 .nav__icon {
   font-size: 36px;
   transition: all 0.33s ease;
   background-color: transparent;
   border: none;
-  color: #F6F8FF;
+  color: #E0DD00;
   cursor: pointer;
 }
 @media (min-width: 992px) {
@@ -1205,7 +1208,7 @@
   position: absolute;
   max-height: 0;
   overflow-y: hidden;
-  top: 80px;
+  top: 110px;
   z-index: 10;
   background-color: #010C13;
   left: 0;

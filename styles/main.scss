@@ -43,16 +43,17 @@ $accent-yellow: #E0DD00;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	// &__logo {
-
-	// }
+	
+	&__logo {
+		max-width: 100px;
+	}
 
 	&__icon {
 		font-size: 36px;
 		transition: all .33s ease;
 		background-color: transparent;
 		border: none;
-		color: $white;
+		color: $accent-yellow;
 		cursor: pointer;
 
 		@media(min-width: 992px) {
@@ -67,7 +68,7 @@ $accent-yellow: #E0DD00;
 		position: absolute;
 		max-height: 0;
 		overflow-y: hidden;
-		top: 80px;
+		top: 110px;
 		z-index: 10;
 		background-color: $black;
 		left:0; 
