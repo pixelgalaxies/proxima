@@ -46,7 +46,7 @@
 						<a href="#trims">Trims</a>
 					</li>
 					<li>
-						<a href="#misc">Misc</a>
+						<a href="#goodies">Goodies</a>
 					</li>
 				</ul>
 			</nav>
@@ -71,9 +71,9 @@
 				<div class="about__details">
 					<h2 class="heading">About</h2>
 					<p>
-						Proxima is a library of classes and mixins to use to give your site a cyberpunk look and feel. It is built
-						with SASS and needs to be included in your SASS or SCSS file. This site is just a demo of everything in the
-						library. For full the documentation and code, checkout the <a
+						Proxima is a library of classes and accompanying mixins to use to give your site a cyberpunk look and feel.
+						This site is a demonstration of everything in the
+						library. For full the documentation and code examples, checkout the <a
 							href="https://github.com/pixelgalaxies/proxima">github repository</a>.
 					</p>
 				</div>
@@ -96,16 +96,15 @@
 				<div class="lines__top">
 					<h2 class="heading">Lines</h2>
 					<p>
-						These are the basic lines. There is a mixin associated with these
-						lines, it takes in the color you'd like the lines to be and also the
-						line-height of the element. They use the before pseudo element so
-						that the after pseudo element is avaiable for other things. See the
-						Other Goodies section.
+						There are five lines to use as accents on text. These lines all use the before pseudo element so
+						that the after pseudo element is avaiable for other things like the cursor effects in the Text section.
+						There
+						are also two glitch class for these lines, one that flips the line and one that displays the "wrong" line.
 					</p>
 				</div>
 
 				<div>
-					<h3 class="subheading">Basic Lines</h3>
+					<h3 class="subheading">Standard Lines</h3>
 					<span class="p-underline-1">.p-underline-1</span>
 					<span class="p-underline-2">.p-underline-2</span>
 					<span class="p-underline-3">.p-underline-3</span>
@@ -125,9 +124,9 @@
 				<div class="lines__bottom">
 					<h3 class="subheading">Mixins to use</h3>
 					<p>
-						There's only one mixin for the lines which will set the color and the distance between line and the
+						There's only one mixin for the lines which will take in the color and the distance between line and the
 						text.
-						<code>@include underline-color($line-color, $line-height);</code>
+						<code>@include underline($line-color, $line-height);</code>
 					</p>
 				</div>
 			</div>
@@ -187,7 +186,8 @@
 				<div class="boxes__top">
 					<h2 class="heading">Boxes</h2>
 					<p>
-						The box classes give any your elements a neat border. Don't forget to set you border color when using these
+						The box classes give any your elements a cyberpunk-esque border. Don't forget to set you border color when
+						using these
 						classes!
 					</p>
 				</div>
@@ -213,7 +213,7 @@
 				<div class="boxes__bottom">
 					<h3 class="subheading">Mixins to use</h3>
 					<p>
-						There are NO mixins for the box classes. You just use set the border-color in your stylesheet.
+						There are no mixins for the box classes. You just use set the border-color in your stylesheet.
 					</p>
 				</div>
 			</div>
@@ -227,8 +227,7 @@
 					<h2 class="heading">Cutouts</h2>
 					<p>
 						Cutouts are a set of classes that are basically the reverse of the boxes. Instead of an outline, the
-						element.
-						will have a background fill. Don't forget to set a background color when using these classes!
+						element will have a background fill. Don't forget to set a background color when using these classes!
 					</p>
 				</div>
 
@@ -251,7 +250,7 @@
 				<div class="cutouts__bottom">
 					<h3 class="subheading">Mixins to use</h3>
 					<p>
-						There are NO mixins for the cutout classes. You just use set the background-color in your stylesheet.
+						There are no mixins for the cutout classes. You just use set the background color in your stylesheet.
 					</p>
 				</div>
 			</div>
@@ -267,10 +266,11 @@
 				</div>
 
 				<div>
-					<h3 class="subheading">Hyper Text Glitch</h3>
+					<h3 class="subheading">Hyper Text</h3>
 					<p class="copy">
-						The Hyper Text Glitch applies a tri-color overlay to an element. It uses a data attribute called
-						"data-content" and uses pseudo elements to create a glitch effect.
+						The Hyper Text class applies a tri-color overlay to an element. It uses a data attribute called
+						"data-content" which should have the same value as the innerHTML and uses pseudo elements to create the
+						glitching effect.
 					</p>
 					<span class="p-hypertext" data-content=".p-hypertext">
 						.p-hypertext
@@ -419,7 +419,7 @@
 						<code>@include dotted($dot-color, $size);</code>
 						<br />
 						For Crossed:
-						<code>@include crossed($color, $size);</code>
+						<code>@include crossed($cross-color, $size);</code>
 						<br />
 						For Connected:
 						<code>@include connected($line-color, $dot-color);</code>

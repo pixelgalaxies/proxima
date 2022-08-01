@@ -27,6 +27,7 @@ $accent-yellow: #E0DD00;
 
 
 
+
 /*------------------------------*\
 # HEADER
 \*------------------------------*/
@@ -115,6 +116,11 @@ $accent-yellow: #E0DD00;
 
 
 // GENERAL
+
+html {
+	scroll-behavior: smooth;
+}
+
 body {
   background-color: $black;
 	color: $white;
@@ -193,7 +199,9 @@ code {
   background-image: url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
   background-size: cover;
   position: relative;
-  padding-top: 200px;
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
 
   &:before {
     position: absolute;
@@ -260,7 +268,7 @@ code {
 .p-underline-3,
 .p-underline-4,
 .p-underline-5 {
-  @include underline-color($accent-pink, 3.5);
+  @include underline($accent-pink, 3.5);
 }
 
 
@@ -389,7 +397,7 @@ code {
 }
 
 .p-odd {
-	@include trim-colors($accent-pink, $black, $black, white);
+	@include trim($accent-pink, $black, $black, white);
 
 	padding: 60px 30px;
 }
@@ -407,7 +415,7 @@ code {
 }
 
 .p-trim-bottom {
-  @include trim-colors($black, $black, $accent-pink, white);
+  @include trim($black, $black, $accent-pink, white);
   padding-bottom: 60px;
 }
 
