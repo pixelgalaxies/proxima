@@ -3,7 +3,7 @@
 ### Proxima is a SCSS library that will let you cyberpunkify your site.
 
 ### Ways to use:
-You can download it [**here**](https://github.com/pixelgalaxies/proxima/raw/master/proxima.zip).
+You can download it [**here**](https://github.com/pixelgalaxies/proxima/blob/main/proxima.zip?raw=true).
 
 Then in your SCSS/SASS file you can do:
 @use 'proxima' as *;
