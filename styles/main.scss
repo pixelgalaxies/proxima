@@ -473,3 +473,21 @@ code {
 		}
 	}
 }
+
+
+.to-top {
+	font-size: 36px;
+	transition: all .33s ease;
+	background-color: transparent;
+	border: none;
+	color: $accent-yellow;
+	cursor: pointer;
+	opacity: 0.5;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+
+	&:hover, &:active, &:focus {
+		opacity: 1;
+	}
+}
