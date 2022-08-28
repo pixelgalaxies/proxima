@@ -965,7 +965,7 @@ $trim-bottom: polygon(
   animation: hypertext-color 1s infinite;
 
   &:before, &:after {
-    content: attr(data-content);
+    content: attr(data-hypertext);
     position: absolute;
     left: 0;
     top: 0;
@@ -1000,7 +1000,7 @@ $trim-bottom: polygon(
 }
 .p-cursor-underline {
   &:after {
-    content: "_";
+    content: "\005F";
     font-weight: 200;
     animation-name: cursor;
     animation-duration: calc($glitch-time / 2);
@@ -1010,7 +1010,7 @@ $trim-bottom: polygon(
 }
 .p-cursor-line {
   &:after {
-    content: "|";
+    content: "\23D0";
     font-weight: 200;
     animation-name: cursor;
     animation-duration: calc($glitch-time / 2);
@@ -1020,7 +1020,7 @@ $trim-bottom: polygon(
 }
 .p-cursor-block {
   &:after {
-    content: "▮";
+    content: "\1FB09";
     font-weight: 200;
     animation-name: cursor;
     animation-duration: calc($glitch-time / 2);

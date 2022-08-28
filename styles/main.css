@@ -992,7 +992,7 @@
           animation: hypertext-color 1s infinite;
 }
 .p-hypertext:before, .p-hypertext:after {
-  content: attr(data-content);
+  content: attr(data-hypertext);
   position: absolute;
   left: 0;
   top: 0;
@@ -1055,7 +1055,7 @@
 }
 
 .p-cursor-line:after {
-  content: "|";
+  content: "⏐";
   font-weight: 200;
   -webkit-animation-name: cursor;
           animation-name: cursor;
@@ -1068,7 +1068,7 @@
 }
 
 .p-cursor-block:after {
-  content: "▮";
+  content: "🬉";
   font-weight: 200;
   -webkit-animation-name: cursor;
           animation-name: cursor;
